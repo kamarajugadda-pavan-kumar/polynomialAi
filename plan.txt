@@ -1,0 +1,13 @@
+[.]configure google project for ClientID and secret
+
+[.]configure google OAuth using passportJs
+
+[.]Get access token and Refresh Token 
+
+#Google drive API
+
+[.]Use the Refresh Token to upload file to google drive
+
+[.]Obtain the details of files uploaded from the drive
+
+[.]share the file to other google user(gmail) using google drive API

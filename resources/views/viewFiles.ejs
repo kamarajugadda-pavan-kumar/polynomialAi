@@ -1,0 +1,31 @@
+
+<section class="container w-full h-full flex flex-col">
+    <div class="m-auto w-4/5">
+        <h1 class="mb-4 font-extrabold text-2xl">view files page</h1>
+        <div class="border flex flex-wrap rounded-lg px-7 py-5">
+            <table class="table-auto w-full">
+                <thead class="text-lg">
+                    <tr>
+                        <th class="text-left">File name</th>
+                        <th class="text-left">Google Drive File ID</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <%for(let i=0;i < data.length;i++){%>
+                        <tr class="odd:bg-gray-100 p-3 hover:text-amber-400">
+                            <td><a href="/share-file/<%=data[i].id%>">
+                                    <%=data[i].name%>
+                                </a></td>
+                            <td><a href="/share-file/<%=data[i].id%>">
+                                    <%=data[i].id%>
+                                </a></td>
+                        </tr>
+                        <%}%>
+                </tbody>
+            </table>
+        
+        </div>
+
+    </div>
+    
+</section>

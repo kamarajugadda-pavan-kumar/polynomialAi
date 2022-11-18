@@ -1,0 +1,17 @@
+<section class="container w-full h-full mx-auto flex flex-col">
+    <div class="m-auto">
+        <h1 class="m-auto font-extrabold text-2xl mb-4">share file with ID </h1>
+        <span class="text-sm bg-amber-500 mb-4">
+            <%=fileId%>
+        </span>
+        <form class="mt-4" id="shareFile" method="post" action="/share-file">
+            <input type="text" name="fileId" id="fileId" class="w-4/5 mb-4 px-2 py-4 border-black border-2 rounded-md"
+                value=<%=fileId%> required/>
+            <input type="email" name="email" id="email" class="w-4/5 mb-4 px-2 py-4 border-black border-2 rounded-md" placeholder="recepient email" required/>
+            <button type="submit" class="px-4 py-2 bg-indigo-700 text-white rounded-lg">Share</button>
+        </form>
+    </div>
+    
+</section>
+
+
