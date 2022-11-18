@@ -32,16 +32,16 @@ https://youtu.be/oEIGc70u4o0
 ## File structure of the project
 
 ```bash
-|__app
+|__app(app folder consistists of configuration for the app, models for mongoDB database, controllers)
 |   |
-|   |__config
+|   |__config (configuration for server)
 |   |     |
 |   |     |__assests.js
 |   |     |__ejsConfig.js
 |   |     |__errorHandler.js
 |   |     |__passport.js
 |   |
-|   |__http
+|   |__http (business logic of the code is written in http folder)
 |   |     |
 |   |     |__controllers
 |   |     |       |__pageControllers.js
@@ -55,11 +55,11 @@ https://youtu.be/oEIGc70u4o0
 |         |__user.js
 |
 |
-|__node_modules
+|__node_modules (node_modules contains all the supporting packages installed from npm repository)
 |
 |
 |
-|__public
+|__public (public folder will be accessible by the client, it consits of all the css, images , js)
 |   |
 |   |__css
 |   |     |__app.css
@@ -80,7 +80,7 @@ https://youtu.be/oEIGc70u4o0
 |   |__scss
 |   |     |__app.scss
 |   |
-|   |__views
+|   |__views (EJS templating is used to create views and scss, tailwind css is used to syle)
 |         |__404.ejs
 |         |__home.ejs
 |         |__layout.ejs
@@ -88,7 +88,7 @@ https://youtu.be/oEIGc70u4o0
 |         |__upload.ejs
 |         |__viewFiles.ejs
 |
-|__routes
+|__routes (all the routes created in this express app is divided into two parts . one that renders EJS file(web.js) and other gives data response(api.js))
 |   |__api.js
 |   |__web.js
 |
@@ -103,47 +103,10 @@ https://youtu.be/oEIGc70u4o0
 ```
 
 
-<!-- app folder consistists of configuration for the app, models , controllers- -->
-[+]app
-    [+]config
-    [+]http
-        [+]controllers
-            [.]otpController.js
-            [.]pageControllers.js
-        [+]middlewares
-    [+]models  
-        [.]message.js
 
-<! node_modules contains all the supporting packages installed from npm repository>
-[+]node_modules
 
-<! public folder will be accessible by the client, it consits of all the css, images , js>
-[+]public
-    [+]css
-        [.]app.css
-    [+]imgs
-        [.]otp-icon.png
-    [+]js
-        [.]app.js 
 
-<!  EJS templating is used to create views and scss, tailwind css is used to syle>
-[+]resources
-    [+]js 
-        [+]app.js
-    [+]scss
-        [.]_variables.scss 
-        [.]app.scss
-    [+]views
-        [.]contactInfo.ejs
-        [.]contacts.ejs
-        [.]home.ejs 
-        [.]layout.ejs 
-        [.]messages.ejs 
-        [.]sendOTP.ejs
-        [.]404.ejs
 
-<! all the routes created in this express app is divided into two parts . one that renders EJS file(web.js) and other gives data response(api.js) >
-[+]routes
-    [.]api.js 
-    [.]web.js 
+
+
 
