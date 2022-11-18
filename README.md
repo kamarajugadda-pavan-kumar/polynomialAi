@@ -1,8 +1,8 @@
 # Uploading , viewing and sharing files in Google Drive using google drive API
 
-The project was developed usign MVC (Models, controllers, views) architecture. 
+The project was developed usign MVC (Models, controllers, views) architecture. The technologies used are Node.js, express.js, EJS, MongoDB, google Drive API. 
 
-npm packages used in the project include
+## npm packages used in the project include
 1. axios __1.1.3__ (_axios is used to make http calls_)
 2. connect-mongo __4.6.0__ (_utility that enables us to store the session created in mongoDB_)
 3. dotenv __16.0.3__ (_enables to read the environment varibales _)
@@ -19,4 +19,131 @@ npm packages used in the project include
 14. passport __0.6.0__ (_authntication library _)
 15. passport-google-oauth20 __2.0.0__ (_google strategy is used to obtain the profile and access token to further interact with the google drive API_)
 
+## running the application
+1. clone the repo and install the packages using `npm i`
+2. The scss and js files are already compiled into the public folder. However if you wish to compile it again , you can use command `npx mix watch`
+3. Then start the project using command `npm start`. The project will be running on PORT 3000 by default. 
+4. start up screen on __localhost:3000__
+<img width="1440" alt="image" src="https://user-images.githubusercontent.com/32819459/202649489-d903b9e7-985f-4c68-94c3-2a64a71cf7c1.png">
+5. Video demonstration of how the app works
+https://youtu.be/oEIGc70u4o0
+
+
+## File structure of the project
+
+```bash
+|__app
+|   |
+|   |__config
+|   |     |
+|   |     |__assests.js
+|   |     |__ejsConfig.js
+|   |     |__errorHandler.js
+|   |     |__passport.js
+|   |
+|   |__http
+|   |     |
+|   |     |__controllers
+|   |     |       |__pageControllers.js
+|   |     |       |__readFilesControllers.js
+|   |     |       |__shareFileController.js
+|   |     |       |__uploadControllers.js
+|   |     |__middlewares
+|   |             |__isUserLoggedIn.js
+|   |             |__pageNotFound.js
+|   |__models
+|         |__user.js
+|
+|
+|__node_modules
+|
+|
+|
+|__public
+|   |
+|   |__css
+|   |     |__app.css
+|   |     
+|   |__imgs     
+|   |     |__chicken N corn Delight.jpeg
+|   |     |__drive.png
+|   |
+|   |__js
+|         |__app.js
+|
+|
+|__resources
+|   |
+|   |__js
+|   |     |__app.js
+|   |
+|   |__scss
+|   |     |__app.scss
+|   |
+|   |__views
+|         |__404.ejs
+|         |__home.ejs
+|         |__layout.ejs
+|         |__shareFile.ejs
+|         |__upload.ejs
+|         |__viewFiles.ejs
+|
+|__routes
+|   |__api.js
+|   |__web.js
+|
+|__.env
+|__.gitignore
+|__index.js
+|__mix-manifest.json
+|__package-lock.json
+|__package.json
+|__plan.txt
+|__webpack.mix.js
+```
+
+
+<!-- app folder consistists of configuration for the app, models , controllers- -->
+[+]app
+    [+]config
+    [+]http
+        [+]controllers
+            [.]otpController.js
+            [.]pageControllers.js
+        [+]middlewares
+    [+]models  
+        [.]message.js
+
+<! node_modules contains all the supporting packages installed from npm repository>
+[+]node_modules
+
+<! public folder will be accessible by the client, it consits of all the css, images , js>
+[+]public
+    [+]css
+        [.]app.css
+    [+]imgs
+        [.]otp-icon.png
+    [+]js
+        [.]app.js 
+
+<!  EJS templating is used to create views and scss, tailwind css is used to syle>
+[+]resources
+    [+]js 
+        [+]app.js
+    [+]scss
+        [.]_variables.scss 
+        [.]app.scss
+    [+]views
+        [.]contactInfo.ejs
+        [.]contacts.ejs
+        [.]home.ejs 
+        [.]layout.ejs 
+        [.]messages.ejs 
+        [.]sendOTP.ejs
+        [.]404.ejs
+
+<! all the routes created in this express app is divided into two parts . one that renders EJS file(web.js) and other gives data response(api.js) >
+[+]routes
+    [.]api.js 
+    [.]web.js 
 
